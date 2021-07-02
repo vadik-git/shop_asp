@@ -1,0 +1,14 @@
+﻿@model Shop.Models.Product
+
+<div class="card filter @Model.Category.Name.Replace(" ","_") mr-3 mt-3" style="width: 18rem;">
+    <img src="/images/products/@Model.Image" class="card-img-top p-3 h-75 " alt="...">
+    <div class="card-body">
+        <h6 class="card-title">@Model.Name</h6>
+        <h5 class="mt-2 text-primary">@Model.Price &#8372; </h5>
+        <span>@Model.ShortDesc</span>
+        <a class="btn btn-primary mt-3" asp-controller="Home" asp-action="ShowProduct" asp-route-id="@Model.Id">View Detalis</a>
+    </div>
+    <div>
+        
+    </div>
+</div>

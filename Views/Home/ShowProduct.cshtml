@@ -1,0 +1,19 @@
+﻿@model Shop.Models.ViewModels.DetalistVM
+
+
+<div class="container">
+    <div class="row">
+        <h1 class="col-12">@Model.Product.Name</h1>
+        <img class="col-10" src="/images/products/@Model.Product.Image" />
+        <h2 class="mt-2 col-12 ">@Model.Product.Price &#8372; </h2>
+        <span class="col-4">@Model.Product.ShortDesc</span>
+    </div>
+    <div class="row">
+        @Html.Raw(Model.Product.Description)
+    </div>
+    <div class="row">
+        <a class="btn btn-success mt-3 col-5 mr-2" asp-controller="" asp-action="" asp-route-id="">Back to List</a>
+        <a class="btn btn-primary mt-3 col-5" asp-controller="" asp-action="" asp-route-id="">Add to Cart</a>
+    </div>
+</div>
+
